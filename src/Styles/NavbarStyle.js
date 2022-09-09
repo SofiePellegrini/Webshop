@@ -20,4 +20,5 @@ export const NavbarIcon = styled.div`
 
 export const NavbarText = styled.h2`
   margin: 15px;
+  font-weight: normal;
 `;

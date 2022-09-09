@@ -3,24 +3,30 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { cart } from 'reducers/cart';
 
-import { Image, ProductText } from 'Styles/ProductsStyle';
+import {
+  Image,
+  ProductText,
+  ProductTitle,
+  ProductPrice,
+  AddButton,
+  ProductWrapper,
+} from 'Styles/ProductsStyle';
 
 export const Product = ({ product }) => {
   const dispatch = useDispatch();
   return (
-    <>
+    <ProductWrapper>
       <ProductText>
-        <p>{product.title}</p>
-        <p>{product.price}:-</p>
-        <Image src={product.imageLink} />
+        <ProductTitle>{product.title}</ProductTitle>
+        <ProductPrice>{product.price}:-</ProductPrice>
+        <AddButton
+          type='button'
+          onClick={() => dispatch(cart.actions.addItem(product))}
+        >
+          Add to cart
+        </AddButton>
       </ProductText>
-
-      <button
-        type='button'
-        onClick={() => dispatch(cart.actions.addItem(product))}
-      >
-        Add to cart
-      </button>
-    </>
+      <Image src={product.imageLink} />
+    </ProductWrapper>
   );
 };

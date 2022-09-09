@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { createSlice } from '@reduxjs/toolkit';
 
-const productData = [
+const popularProductsData = [
   {
     id: 1,
     title: 'Black bag',
@@ -15,38 +15,38 @@ const productData = [
     imageLink: require('../images/brownbag.jpg'),
   },
   {
-    id: 3,
+    id: 2,
     title: 'Pink backpack',
     price: 99.9,
     imageLink: require('../images/backpack.jpg'),
   },
   {
-    id: 4,
+    id: 2,
     title: 'Black handbag',
     price: 319.8,
     imageLink: require('../images/blackbag.jpg'),
   },
   {
-    id: 5,
+    id: 2,
     title: 'Blue backpack',
     price: 99.9,
     imageLink: require('../images/bluebackpack.jpg'),
   },
   {
-    id: 6,
+    id: 2,
     title: 'Handbag',
     price: 149.9,
     imageLink: require('../images/handbag.jpg'),
   },
   {
-    id: 7,
+    id: 2,
     title: 'Pink handbag',
     price: 350.9,
     imageLink: require('../images/pinkbag.jpg'),
   },
 ];
 
-export const products = createSlice({
-  name: 'products',
-  initialState: productData,
+export const popular = createSlice({
+  name: 'popular',
+  initialState: popularProductsData,
 });

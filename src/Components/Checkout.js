@@ -7,6 +7,7 @@ import { CheckoutItem } from './CheckoutItem';
 
 export const Checkout = () => {
   const basketItems = useSelector((store) => store.cart.items);
+
   return (
     <>
       <Navbar />

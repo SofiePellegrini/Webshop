@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 
 import { Navbar } from 'Components/Navbar';
 import { Footer } from './Footer';
+import { PopularProducts } from './PopularProducts';
 
 export const Products = () => {
   const allProducts = useSelector((store) => store.products);
@@ -12,11 +13,13 @@ export const Products = () => {
   return (
     <>
       <Navbar />
+
       <div className='products'>
         {allProducts.map((product) => (
           <Product key={product.id} product={product} />
         ))}
       </div>
+      <PopularProducts />
       <Footer />
     </>
   );

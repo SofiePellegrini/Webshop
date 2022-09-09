@@ -9,10 +9,12 @@ import { Checkout } from 'Components/Checkout';
 
 import { products } from 'reducers/products';
 import { cart } from 'reducers/cart';
+import { popular } from 'reducers/popular';
 
 const reducer = combineReducers({
   products: products.reducer,
   cart: cart.reducer,
+  popular: popular.reducer,
 });
 
 const store = configureStore({ reducer: reducer });

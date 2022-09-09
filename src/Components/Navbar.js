@@ -24,7 +24,9 @@ export const Navbar = () => {
   );
   return (
     <NavbarWrapper>
-      <NavbarText>BagLady</NavbarText>
+      <Link to='/' style={{ textDecoration: 'none' }}>
+        <NavbarText>BagLady</NavbarText>
+      </Link>
       <NavbarRight>
         <NavbarIcon>
           <Link to='checkout' style={{ textDecoration: 'none' }}>
