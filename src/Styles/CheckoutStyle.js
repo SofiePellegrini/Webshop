@@ -10,6 +10,7 @@ export const CheckoutWrapper = styled.div`
   padding: 5px;
   width: 90%;
   border-radius: 10px;
+  position: relative;
 `;
 
 export const CheckoutText = styled.div`
@@ -41,18 +42,18 @@ export const CheckoutQuantity = styled.p`
 
 export const CheckoutPrice = styled.p`
   margin: 0;
+  font-size: 18px;
 `;
 
 export const CheckoutButton = styled.button`
   font-family: 'Josefin Sans', sans-serif;
-  background-color: white;
-  font-weight: bold;
-  font-size: 18px;
+  background-color: transparent;
+
+  font-size: 22px;
   width: 30px;
   margin: 5px;
   border-radius: 10px;
-
-  border: 1px solid black;
+  border: none;
 `;
 
 export const CheckoutQuantityWrapper = styled.div`
@@ -60,4 +61,22 @@ export const CheckoutQuantityWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   width: 100px;
+`;
+
+export const EmptyButton = styled.button`
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: white;
+  font-weight: normal;
+  font-size: 18px;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+`;
+
+export const TrashWrapper = styled.div`
+  margin: 0;
+  position: absolute;
 `;

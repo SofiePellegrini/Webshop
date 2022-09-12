@@ -2,10 +2,15 @@
 import React from 'react';
 import { Navbar } from './Navbar';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { CheckoutItem } from './CheckoutItem';
 
-import { EmptyBagText, CheckoutWrapper } from 'Styles/CheckoutStyle';
+import {
+  EmptyBagText,
+  CheckoutWrapper,
+  EmptyButton,
+} from 'Styles/CheckoutStyle';
 
 export const Checkout = () => {
   const basketItems = useSelector((store) => store.cart.items);
@@ -14,7 +19,13 @@ export const Checkout = () => {
     <>
       <Navbar />
       {basketItems.length === 0 && (
-        <EmptyBagText>You have no bags in your shoppingbag yet.</EmptyBagText>
+        <>
+          <EmptyBagText>You have no bags in your shoppingbag yet.</EmptyBagText>
+
+          <Link to='/' style={{ textDecoration: 'none' }}>
+            <EmptyButton>Get me a bag!</EmptyButton>
+          </Link>
+        </>
       )}
 
       {basketItems.map((item) => (

@@ -5,6 +5,9 @@ import styled from 'styled-components';
 export const ProductWrapper = styled.div`
   display: flex;
   justify-content: center;
+  @media (min-width: 668px) {
+    flex-direction: row;
+  }
 `;
 
 export const Image = styled.img`
@@ -12,6 +15,9 @@ export const Image = styled.img`
   position: relative;
   margin: 5px 0px 5px 0px;
   vertical-align: middle;
+  @media (min-width: 668px) {
+    width: 20%;
+  }
 `;
 
 export const ProductText = styled.div`
@@ -19,6 +25,9 @@ export const ProductText = styled.div`
   z-index: 100;
   right: 10px;
   font-size: 18px;
+  @media (min-width: 668px) {
+    left: 670px;
+  }
 `;
 
 export const ProductPrice = styled.p`
