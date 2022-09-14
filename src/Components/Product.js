@@ -16,6 +16,7 @@ export const Product = ({ product }) => {
   const dispatch = useDispatch();
   return (
     <ProductWrapper>
+      <Image src={product.imageLink} />
       <ProductText>
         <ProductTitle>{product.title}</ProductTitle>
         <ProductPrice>{product.price}:-</ProductPrice>
@@ -26,7 +27,6 @@ export const Product = ({ product }) => {
           Add to cart
         </AddButton>
       </ProductText>
-      <Image src={product.imageLink} />
     </ProductWrapper>
   );
 };

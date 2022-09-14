@@ -2,11 +2,28 @@
 import React from 'react';
 import styled from 'styled-components';
 
+export const AllProducts = styled.div`
+  @media (min-width: 668px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 75%;
+  }
+`;
+
 export const ProductWrapper = styled.div`
   display: flex;
   justify-content: center;
-  @media (min-width: 668px) {
-    flex-direction: row;
+  @media (min-width: 992px) {
+    width: 25%;
+    flex-direction: column;
+    position: relative;
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    width: 50%;
+    flex-direction: column;
+    position: relative;
   }
 `;
 
@@ -16,7 +33,7 @@ export const Image = styled.img`
   margin: 5px 0px 5px 0px;
   vertical-align: middle;
   @media (min-width: 668px) {
-    width: 20%;
+    height: 450px;
   }
 `;
 
@@ -26,7 +43,8 @@ export const ProductText = styled.div`
   right: 10px;
   font-size: 18px;
   @media (min-width: 668px) {
-    left: 670px;
+    top: 15px;
+    right: 15px;
   }
 `;
 

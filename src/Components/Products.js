@@ -7,6 +7,8 @@ import { Navbar } from 'Components/Navbar';
 import { Footer } from './Footer';
 import { PopularProducts } from './PopularProducts';
 
+import { AllProducts } from 'Styles/ProductsStyle';
+
 export const Products = () => {
   const allProducts = useSelector((store) => store.products);
 
@@ -14,11 +16,11 @@ export const Products = () => {
     <>
       <Navbar />
 
-      <div className='products'>
+      <AllProducts>
         {allProducts.map((product) => (
           <Product key={product.id} product={product} />
         ))}
-      </div>
+      </AllProducts>
       <PopularProducts />
       <Footer />
     </>

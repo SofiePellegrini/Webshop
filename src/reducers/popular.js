@@ -6,7 +6,7 @@ const popularProductsData = [
     id: 1,
     title: 'Black bag',
     price: 149.9,
-    imageLink: require('../images/bluebag.jpg'),
+    imageLink: require('../images/handbag2.jpg'),
   },
   {
     id: 2,
@@ -15,16 +15,16 @@ const popularProductsData = [
     imageLink: require('../images/brownbag.jpg'),
   },
   {
-    id: 2,
+    id: 3,
     title: 'Pink backpack',
     price: 99.9,
-    imageLink: require('../images/backpack.jpg'),
+    imageLink: require('../images/handbag3.jpg'),
   },
   {
     id: 2,
     title: 'Black handbag',
     price: 319.8,
-    imageLink: require('../images/blackbag.jpg'),
+    imageLink: require('../images/handbag4.jpg'),
   },
   {
     id: 2,

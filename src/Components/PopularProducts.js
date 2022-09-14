@@ -2,24 +2,26 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { ScrollMenu } from 'react-horizontal-scrolling-menu';
+import { LeftArrow, RightArrow } from './sidescroll';
 
-import { PopularProduct } from './PopularProduct';
-
-import { PopularImage, PopularText } from 'Styles/PopularStyles';
+import {
+  PopularImage,
+  PopularText,
+  PopularWrapper,
+} from 'Styles/PopularStyles';
 
 export const PopularProducts = () => {
   const allPopular = useSelector((store) => store.popular);
+
   return (
-    <>
+    <PopularWrapper>
       <PopularText>Popular now</PopularText>
-      <ScrollMenu
-        arrowLeft={<div style={{ fontSize: '30px' }}>{' < '}</div>}
-        arrowRight={<div style={{ fontSize: '30px' }}>{' > '}</div>}
-      >
+
+      <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
         {allPopular.map((popular) => (
           <PopularImage src={popular.imageLink} />
         ))}
       </ScrollMenu>
-    </>
+    </PopularWrapper>
   );
 };

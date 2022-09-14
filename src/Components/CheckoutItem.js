@@ -3,8 +3,6 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { cart } from 'reducers/cart';
 
-import { FaTrashAlt } from 'react-icons/fa';
-
 import {
   ItemImage,
   CheckoutWrapper,

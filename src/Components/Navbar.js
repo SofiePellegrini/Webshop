@@ -11,6 +11,7 @@ import {
   NavbarText,
   NavbarRight,
   NavbarIcon,
+  NavbarDiv,
 } from 'Styles/NavbarStyle';
 
 export const Navbar = () => {
@@ -24,19 +25,21 @@ export const Navbar = () => {
   );
   return (
     <NavbarWrapper>
-      <Link to='/' style={{ textDecoration: 'none' }}>
-        <NavbarText>BagLady</NavbarText>
-      </Link>
-      <NavbarRight>
-        <NavbarIcon>
-          <Link to='checkout' style={{ textDecoration: 'none' }}>
-            <IconContext.Provider value={{ size: '2em' }}>
-              <MdShoppingBasket />
-            </IconContext.Provider>
-          </Link>
-        </NavbarIcon>
-        <NavbarText>{totalPrice}:-</NavbarText>
-      </NavbarRight>
+      <NavbarDiv>
+        <Link to='/' style={{ textDecoration: 'none' }}>
+          <NavbarText>BagLady</NavbarText>
+        </Link>
+        <NavbarRight>
+          <NavbarIcon>
+            <Link to='checkout' style={{ textDecoration: 'none' }}>
+              <IconContext.Provider value={{ size: '2em' }}>
+                <MdShoppingBasket />
+              </IconContext.Provider>
+            </Link>
+          </NavbarIcon>
+          <NavbarText>{totalPrice}:-</NavbarText>
+        </NavbarRight>
+      </NavbarDiv>
     </NavbarWrapper>
   );
 };

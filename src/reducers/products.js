@@ -44,6 +44,12 @@ const productData = [
     price: 350,
     imageLink: require('../images/pinkbag.jpg'),
   },
+  {
+    id: 8,
+    title: 'White bag',
+    price: 249,
+    imageLink: require('../images/whitebag.jpg'),
+  },
 ];
 
 export const products = createSlice({

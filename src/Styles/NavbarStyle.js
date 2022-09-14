@@ -9,6 +9,16 @@ export const NavbarWrapper = styled.div`
   background-color: white;
 `;
 
+export const NavbarDiv = styled.div`
+  @media (min-width: 668px) {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+`;
+
 export const NavbarRight = styled.div`
   display: flex;
   flex-direction: row;
