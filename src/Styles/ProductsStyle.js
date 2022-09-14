@@ -60,8 +60,15 @@ export const ProductTitle = styled.p`
 export const AddButton = styled.button`
   font-family: 'Josefin Sans', sans-serif;
   width: 100px;
-  background-color: #ffe3a3;
+  background-color: #faeaa5;
   border-radius: 10px;
   padding: 5px;
   border: 1px solid black;
+  cursor: pointer;
+  transition: transform 0.2s;
+  @media (min-width: 992px) {
+    :hover {
+      transform: scale(1.1);
+    }
+  }
 `;

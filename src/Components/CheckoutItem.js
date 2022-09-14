@@ -12,6 +12,7 @@ import {
   CheckoutPrice,
   CheckoutButton,
   CheckoutQuantityWrapper,
+  CheckoutTitle,
 } from 'Styles/CheckoutStyle';
 
 export const CheckoutItem = ({ item }) => {
@@ -43,6 +44,7 @@ export const CheckoutItem = ({ item }) => {
               +
             </CheckoutButton>
           </CheckoutQuantityWrapper>
+          <CheckoutTitle>{item.title}</CheckoutTitle>
           <CheckoutPrice>{resultMultiply}:-</CheckoutPrice>
         </CheckoutText>
       </CheckoutWrapper>

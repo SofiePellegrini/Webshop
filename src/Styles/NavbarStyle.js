@@ -10,6 +10,10 @@ export const NavbarWrapper = styled.div`
 `;
 
 export const NavbarDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
   @media (min-width: 668px) {
     display: flex;
     flex-direction: row;
